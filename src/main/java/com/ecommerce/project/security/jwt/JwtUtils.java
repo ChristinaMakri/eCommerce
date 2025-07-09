@@ -1,6 +1,6 @@
 package com.ecommerce.project.security.jwt;
 
-import com.ecommerce.project.security.UserDetailsImpl;
+import com.ecommerce.project.security.services.UserDetailsImpl;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
@@ -38,6 +38,14 @@ public class JwtUtils {
         } else {
             return null;
         }
+    }
+
+    public String getJwtFromHeader(HttpServletRequest request) {
+        String bearerToken = request.getHeader("Authorization");
+        if (bearerToken != null && bearerToken.startsWith("Bearer ")) {
+            return bearerToken.substring(7);
+        }
+        return null;
     }
 
     public ResponseCookie generateJwtCookie(UserDetailsImpl userPrincipal) {
