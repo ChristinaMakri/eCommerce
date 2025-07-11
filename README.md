@@ -1,18 +1,20 @@
 OVERVIEW
 
-eCommerce is a robust and scalable web application developed using Java Spring Boot. It delivers core functionalities for online retail platforms including user management, 
-product catalog, shopping cart, and order processing with a secure and extensible architecture.
+eCommerce is a robust and scalable backend application developed using Java 17 and the Spring Boot framework. It delivers the essential infrastructure for powering an online retail platform, including user management, product catalog, and (optionally) shopping cart and order processing. The system is designed with modularity, security, and extensibility in mind, making it suitable for integration with various frontend frameworks or third-party services.
 
 
 
 KEY FEATURES
 
--Secure user authentication and authorization
--Comprehensive product management with search and filtering
--Shopping cart with real-time updates
--Order processing workflow with status tracking
--RESTful API endpoints for frontend or third-party integration
--Flexible data persistence supporting multiple relational databases
+-JWT-based authentication and role-based authorization (USER / ADMIN)
+-User and address management with CRUD operations
+-Shopping cart functionality with real-time update support
+-Product and category management with optional filtering & searching
+-Order processing workflow 
+-RESTful API endpoints, documented and tested via Postman
+-Spring Security integration with secure password handling
+-Cross-Origin Resource Sharing (CORS) support for frontend integration
+-Global exception handling and validation
 
 
 
@@ -22,6 +24,5 @@ TECHNOLOGY STACK
 -Spring Boot Framework
 -Spring Security
 -Spring Data JPA with Hibernate ORM
--Thymeleaf templating engine (or adaptable to other frontends)
--Relational databases: MySQL, H2 (in-memory)
--Build tools: Maven or Gradle
+-Relational databases: PostgreSQL 
+-Build tools: Maven
